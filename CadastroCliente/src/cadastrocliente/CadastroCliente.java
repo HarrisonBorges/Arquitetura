@@ -10,9 +10,9 @@ public class CadastroCliente {
         Scanner ler = new Scanner(System.in);
         ArrayList<Cliente> clientes = new ArrayList<>();
         Cliente cliente;
-        //
+        
         while(opt != 3){
-            System.out.println("Escolha uma opção abaixo:");
+            System.out.println("\n\n\n\nEscolha uma opção abaixo:");
             System.out.println("1 - Inserir Cliente");
             System.out.println("2 - Listar Clientes");
             System.out.println("3 - Sair");
@@ -22,7 +22,7 @@ public class CadastroCliente {
             
             switch (opt) {
                 case 1:
-                    System.out.println("\n\n==========================");
+                    System.out.println("\n\n\n\n==========================");
                     System.out.println("Cadastrando cliente");
                     System.out.println("==========================");
                     
@@ -34,13 +34,17 @@ public class CadastroCliente {
                     clientes.add(cliente);
                     break;
                 case 2:
-                    System.out.println("==========================");
-                    System.out.println("\n\nListagem de Clientes");
+                    System.out.println("\n\n\n\n==========================");
+                    System.out.println("Listagem de Clientes");
                     System.out.println("==========================");
                     
                     for (Cliente c : clientes)
                         System.out.println(c);
                     
+                    System.out.println("Aperte qualquer tecla para continuar");
+                    
+                    ler.next();
+                    ler.nextLine();
                     break;
                 case 3:
                     System.out.println("\n\n\n\nSistema Finalizado!");
